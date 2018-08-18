@@ -38,8 +38,10 @@ public class MainActivity extends AppCompatActivity {
                 contrasena = findViewById(R.id.contrasena);
                 String mail1 = mail.getText().toString();
                 String contrasena1 = contrasena.getText().toString();
+
+
                 setContentView(R.layout.pantinicio);
-                Toast.makeText(context, "Hola Mundo!!", Toast.LENGTH_LONG).show();
+                Toast.makeText(context, mail1 + " " + contrasena1, Toast.LENGTH_LONG).show();
             }
         });
 

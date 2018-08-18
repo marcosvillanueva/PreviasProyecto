@@ -22,10 +22,4 @@ public class Persona {
 
     }
 
-    public void CrearPersona(String mail, String contrasena){
-        if (mail==contrasena){
-
-        }
-
-    }
 }
