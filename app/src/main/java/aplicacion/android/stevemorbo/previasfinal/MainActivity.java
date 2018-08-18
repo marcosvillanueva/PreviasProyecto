@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
                 contrasena = findViewById(R.id.contrasena);
                 String mail1 = mail.getText().toString();
                 String contrasena1 = contrasena.getText().toString();
-
+                Persona persona = new Persona("","",mail1, contrasena1);
 
                 setContentView(R.layout.pantinicio);
                 Toast.makeText(context, mail1 + " " + contrasena1, Toast.LENGTH_LONG).show();
