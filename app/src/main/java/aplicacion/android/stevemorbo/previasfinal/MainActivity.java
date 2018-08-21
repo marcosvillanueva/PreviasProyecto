@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Context context = this;
-        Toasts.toastmain(this);
+        Toasts.toastmain(context);
 
         inicio = (Button) findViewById(R.id.iniciarsesion);
 
@@ -38,10 +38,14 @@ public class MainActivity extends AppCompatActivity {
                 contrasena = findViewById(R.id.contrasena);
                 String mail1 = mail.getText().toString();
                 String contrasena1 = contrasena.getText().toString();
-                Persona persona = new Persona("","",mail1, contrasena1);
 
-                setContentView(R.layout.pantinicio);
-                Toast.makeText(context, mail1 + " " + contrasena1, Toast.LENGTH_LONG).show();
+                boolean mensaje = ServicePersona.iniciarsesion(mail1, contrasena1, context);
+                if (mensaje){
+                    setContentView(R.layout.pantinicio);
+                    Toast.makeText(context, mail1 + " " + contrasena1, Toast.LENGTH_LONG).show();
+                }else {
+                    Toast.makeText(context, "Datos incorrectos", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
