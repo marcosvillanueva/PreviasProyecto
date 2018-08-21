@@ -43,6 +43,7 @@ public class MainActivity extends AppCompatActivity {
                 if (mensaje){
                     setContentView(R.layout.pantinicio);
                     Toast.makeText(context, mail1 + " " + contrasena1, Toast.LENGTH_LONG).show();
+                    ServicePrevia.cargarprevia();
                 }else {
                     Toast.makeText(context, "Datos incorrectos", Toast.LENGTH_LONG).show();
                 }
@@ -67,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                         String apellido1 = apellido.getText().toString();
                         String mail1 = mail.getText().toString();
                         String contrasena1 = contrasena.getText().toString();
-                        Persona persona1 = new Persona(nombre1, apellido1, mail1, contrasena1);
+                        Persona persona1 = new Persona(nombre1, apellido1, mail1, contrasena1, "", "", "");
                         Toast.makeText(context, "Nombre " + persona1.nombre, Toast.LENGTH_SHORT).show();
                         Toast.makeText(context, "Apellido " + persona1.apellido, Toast.LENGTH_SHORT).show();
                         Toast.makeText(context, "Mail " + persona1.mail, Toast.LENGTH_SHORT).show();
