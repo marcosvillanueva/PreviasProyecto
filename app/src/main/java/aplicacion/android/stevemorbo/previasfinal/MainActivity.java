@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         final Context context = this;
-        Toasts.toastmain(this);
+        Toasts.toastmain(context);
 
         inicio = (Button) findViewById(R.id.iniciarsesion);
 
@@ -38,10 +38,15 @@ public class MainActivity extends AppCompatActivity {
                 contrasena = findViewById(R.id.contrasena);
                 String mail1 = mail.getText().toString();
                 String contrasena1 = contrasena.getText().toString();
-                Persona persona = new Persona("","",mail1, contrasena1);
 
-                setContentView(R.layout.pantinicio);
-                Toast.makeText(context, mail1 + " " + contrasena1, Toast.LENGTH_LONG).show();
+                boolean mensaje = ServicePersona.iniciarsesion(mail1, contrasena1, context);
+                if (mensaje){
+                    setContentView(R.layout.pantinicio);
+                    Toast.makeText(context, mail1 + " " + contrasena1, Toast.LENGTH_LONG).show();
+                    ServicePrevia.cargarprevia();
+                }else {
+                    Toast.makeText(context, "Datos incorrectos", Toast.LENGTH_LONG).show();
+                }
             }
         });
 
@@ -63,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                         String apellido1 = apellido.getText().toString();
                         String mail1 = mail.getText().toString();
                         String contrasena1 = contrasena.getText().toString();
-                        Persona persona1 = new Persona(nombre1, apellido1, mail1, contrasena1);
+                        Persona persona1 = new Persona(nombre1, apellido1, mail1, contrasena1, "", "", "");
                         Toast.makeText(context, "Nombre " + persona1.nombre, Toast.LENGTH_SHORT).show();
                         Toast.makeText(context, "Apellido " + persona1.apellido, Toast.LENGTH_SHORT).show();
                         Toast.makeText(context, "Mail " + persona1.mail, Toast.LENGTH_SHORT).show();
