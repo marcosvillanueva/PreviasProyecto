@@ -11,6 +11,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.firebase.analytics.FirebaseAnalytics;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class MainActivity extends AppCompatActivity {
 
     private Button inicio;
@@ -20,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     private EditText mail;
     private EditText contrasena;
     private Button registro;
+    private FirebaseAnalytics mFirebaseAnalytics;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,17 +36,24 @@ public class MainActivity extends AppCompatActivity {
         final Context context = this;
         Toasts.toastmain(context);
 
-        inicio = (Button) findViewById(R.id.iniciarsesion);
+        mFirebaseAnalytics = FirebaseAnalytics.getInstance(this);
+        mAuth = FirebaseAuth.getInstance();
 
+        // Write a message to the database
+        FirebaseDatabase database = FirebaseDatabase.getInstance();
+        DatabaseReference myRef = database.getReference("message");
+
+        myRef.setValue("Hello, World!");
+
+        bindUI();
+
+        inicio = (Button) findViewById(R.id.iniciarsesion);
         inicio.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                mail = findViewById(R.id.mail);
-                contrasena = findViewById(R.id.contrasena);
                 String mail1 = mail.getText().toString();
                 String contrasena1 = contrasena.getText().toString();
-
-                boolean mensaje = ServicePersona.iniciarsesion(mail1, contrasena1, context);
+                boolean mensaje = ServicePersona.iniciarsesion(mail1, contrasena1);
                 if (mensaje){
                     setContentView(R.layout.pantinicio);
                     Toast.makeText(context, mail1 + " " + contrasena1, Toast.LENGTH_LONG).show();
@@ -60,10 +74,6 @@ public class MainActivity extends AppCompatActivity {
                 registro.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View view) {
-                        nombre = findViewById(R.id.nombre);
-                        apellido = findViewById(R.id.apellido);
-                        mail = findViewById(R.id.mail);
-                        contrasena = findViewById(R.id.contrasena);
                         String nombre1 = nombre.getText().toString();
                         String apellido1 = apellido.getText().toString();
                         String mail1 = mail.getText().toString();
@@ -80,10 +90,13 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-
-
-    public void registro(View v){
+    private void bindUI(){
+        nombre = findViewById(R.id.nombre);
+        apellido = findViewById(R.id.apellido);
+        mail = findViewById(R.id.mail);
+        contrasena = findViewById(R.id.contrasena);
     }
+
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

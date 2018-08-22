@@ -1,10 +1,8 @@
 package aplicacion.android.stevemorbo.previasfinal;
 
-import android.content.Context;
-
 public class ServicePersona {
 
-    public static boolean iniciarsesion(String mail, String contrasena, Context context){
+    public static boolean iniciarsesion(String mail, String contrasena){
 
         if(mail.equals(contrasena)){
             return true;
@@ -12,4 +10,6 @@ public class ServicePersona {
             return false;
         }
     }
+
+
 }
