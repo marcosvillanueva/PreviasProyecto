@@ -43,7 +43,6 @@
 
     <Button
         android:id="@+id/iniciarsesion"
-        android:style="?attr/buttonStyle"
         android:layout_width="113dp"
         android:layout_height="wrap_content"
         android:layout_marginBottom="132dp"
