@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "13892085731",
+    "firebase_url": "https://previas-210399.firebaseio.com",
+    "project_id": "previas-210399",
+    "storage_bucket": "previas-210399.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:13892085731:android:22cca289708fafad",
+        "android_client_info": {
+          "package_name": "aplicacion.android.stevemorbo.previasfinal"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "13892085731-1l32mlcsnhkm3bsrona8om1qbir5pro5.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "aplicacion.android.stevemorbo.previasfinal",
+            "certificate_hash": "7ea64079b75cabeb039e55bf50a061db7c586f4b"
+          }
+        },
+        {
+          "client_id": "13892085731-4fbgujq0i3edirjue7b11lb2q45ajtr1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBkQ1qzf3LV_vyO2AqmAQNFzOL5kgEkyAU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "13892085731-4fbgujq0i3edirjue7b11lb2q45ajtr1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -7,7 +7,7 @@ public class Toasts {
 
     public static void toastmain(Context context){
 
-        Toast.makeText(context, "Hola Mundo!!", Toast.LENGTH_LONG).show();
+        Toast.makeText(context, "Hola Prueba!!", Toast.LENGTH_LONG).show();
 
     }
 }
