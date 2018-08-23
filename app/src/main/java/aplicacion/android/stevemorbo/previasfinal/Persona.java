@@ -22,10 +22,14 @@ public class Persona {
             this.ubicacion.provincia = provincia;
             this.ubicacion.departamento = departamento;
 
+
+
         }
+
+
 
 
 
     }
 
-}
+
