@@ -26,15 +26,6 @@ public class Persona {
 
         }
 
-        /*private void writeNewUser(String userId, String nombre,String apellido, String mail, String contrasena) {
-
-            FirebaseDatabase database = FirebaseDatabase.getInstance();
-            DatabaseReference Person = database.getReference("Persona");
-            Persona user = new Persona(nombre, apellido, mail, contrasena, "","","");
-
-            Person.child("users").child(userId).setValue(user);
-        }*/
-
 
 
 
