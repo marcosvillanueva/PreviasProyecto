@@ -23,6 +23,14 @@
           }
         },
         {
+          "client_id": "13892085731-gkrhjhn8vcht1ts5u763c4aed3q29g7f.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "aplicacion.android.stevemorbo.previasfinal",
+            "certificate_hash": "cf1cd9dc9487906ebccb63675af84057eb95a7f9"
+          }
+        },
+        {
           "client_id": "13892085731-4fbgujq0i3edirjue7b11lb2q45ajtr1.apps.googleusercontent.com",
           "client_type": 3
         }
