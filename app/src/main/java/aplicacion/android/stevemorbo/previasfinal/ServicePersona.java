@@ -2,12 +2,16 @@ package aplicacion.android.stevemorbo.previasfinal;
 
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class ServicePersona {
 
     public static boolean iniciarsesion(String mail, String contrasena){
+
         FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference buscarUsuario = database.getReference("Persona");
+
+        ValueEventListener
 
         if(mail.equals(contrasena)){
 
