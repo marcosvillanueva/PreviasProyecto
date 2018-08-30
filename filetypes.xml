@@ -3,7 +3,6 @@
     <extensionMap>
       <mapping pattern="cons" type="CLASS" />
       <mapping pattern="Personaa" type="CLASS" />
-      <mapping pattern="Persona.java" type="PLAIN_TEXT" />
     </extensionMap>
   </component>
 </application>
