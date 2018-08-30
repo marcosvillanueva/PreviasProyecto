@@ -1,4 +1,15 @@
 <application>
+  <component name="GitRememberedInputs">
+    <option name="visitedUrls">
+      <list>
+        <UrlAndUserName>
+          <option name="url" value="https://github.com/marcosvillanueva/PreviasProyecto.git" />
+          <option name="userName" value="" />
+        </UrlAndUserName>
+      </list>
+    </option>
+    <option name="cloneParentDir" value="C:\Users\Facu\Documents\GitHub" />
+  </component>
   <component name="Vcs.Log.App.Settings">
     <option name="MIGRATED" value="true" />
   </component>
